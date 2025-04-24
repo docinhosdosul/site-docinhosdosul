@@ -10,29 +10,29 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333; /* Cor padrão do texto alterada para preto para melhor leitura */
+            color: #333;
             text-align: center;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            position: relative; /* Necessário para posicionar o ::before */
+            position: relative;
         }
         body::before {
             content: "";
-            position: fixed; /* Mantém o fundo fixo */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: url('img2.jpg') no-repeat center center;
             background-size: cover;
-            filter: blur(5px); /* Aplica o desfoque à imagem de fundo */
-            z-index: -1; /* Coloca a imagem atrás do conteúdo */
+            filter: blur(5px);
+            z-index: -1;
         }
         header {
             padding: 2rem;
             z-index: 10;
-            background-color: rgba(0, 188, 212, 0.8); /* Ciano com um pouco de transparência para o fundo desfocado aparecer */
+            background-color: #00bcd4; /* Fundo ciano sólido */
             color: #fff;
         }
         header img {
@@ -49,11 +49,14 @@
         .main-background {
             flex-grow: 1;
             padding: 2rem 1rem;
-            background-color: rgba(255, 192, 203, 0.5); /* Rosinha claro com mais visibilidade */
+            background-color: transparent; /* Fundo transparente para o main-background */
+            display: flex; /* Adicionado para alinhar as seções verticalmente */
+            flex-direction: column; /* Adicionado para alinhar as seções verticalmente */
+            justify-content: center; /* Opcional: centraliza as seções verticalmente */
         }
         section {
             padding: 3rem 1rem;
-            background-color: rgba(255, 255, 255, 0.8); /* Branco com um pouco de transparência para o fundo desfocado aparecer */
+            background-color: rgba(255, 255, 255, 0.8); /* Branco com um pouco de transparência */
             color: #333;
             border-radius: 20px;
             margin: 2rem auto;
@@ -141,7 +144,7 @@
         }
         footer {
             padding: 2rem 1rem;
-            background-color: rgba(0, 188, 212, 0.8); /* Ciano com um pouco de transparência */
+            background-color: #00bcd4; /* Fundo ciano sólido */
             color: #fff;
             font-size: 0.9rem;
             display: flex;
