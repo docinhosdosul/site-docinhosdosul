@@ -10,7 +10,8 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(to bottom right, #00bcd4, #ff4081);
+            background: #fff url('img2.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             text-align: center;
             display: flex;
@@ -19,6 +20,8 @@
         }
         header {
             padding: 2rem;
+            z-index: 10;
+            background-color: #00bcd4;
         }
         header img {
             max-width: 600px;
@@ -32,16 +35,13 @@
             margin-top: 0;
         }
         .main-background {
-            position: relative;
-            background: #fff url('img2.jpg') no-repeat center center;
-            background-size: contain;
-            background-attachment: fixed;
-            opacity: 0.9;
             flex-grow: 1;
+            padding: 2rem 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
         }
         section {
             padding: 3rem 1rem;
-            background: rgba(255, 255, 255, 0.85);
+            background: #fff;
             color: #333;
             border-radius: 20px;
             margin: 2rem auto;
@@ -64,24 +64,28 @@
             background-color: #c2185b;
         }
         .carousel-wrapper {
-            position: relative;
             max-width: 100%;
-            margin: 2rem auto;
+            overflow: hidden;
+            position: relative;
         }
         .carousel {
             display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
             gap: 1rem;
-            padding: 1rem;
+            padding: 1rem 0;
+            animation: scroll 80s linear infinite;
+            width: max-content;
         }
         .carousel img {
-            scroll-snap-align: center;
             width: 300px;
             height: 200px;
             object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
         form {
             max-width: 500px;
@@ -179,6 +183,17 @@
                     <img src="img4.jpg" alt="Docinho 4">
                     <img src="img5.jpg" alt="Docinho 5">
                     <img src="img6.jpg" alt="Docinho 6">
+                    <img src="img7.jpg" alt="Docinho 7">
+                    <img src="img8.jpg" alt="Docinho 8">
+                    <img src="img9.jpg" alt="Docinho 9">
+                    <img src="img10.jpg" alt="Docinho 10">
+                    <img src="img11.jpg" alt="Docinho 11">
+                    <img src="img12.jpg" alt="Docinho 12">
+                    <img src="img13.jpg" alt="Docinho 13">
+                    <img src="img14.jpg" alt="Docinho 14">
+                    <img src="img15.jpg" alt="Docinho 15">
+                    <img src="img16.jpg" alt="Docinho 16">
+                    <img src="img17.jpg" alt="Docinho 17">
                 </div>
             </div>
 
