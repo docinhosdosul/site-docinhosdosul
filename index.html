@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="icon" href="favicon.png" type="image/x-icon">
+  <meta name="google-site-verification" content="_d4K6QoJKbmokGh6H46GbO44z_HRTj9-_X6PLLSBsh8" />
   <style>
     :root {
       --ciano: #00bcd4;
@@ -18,8 +19,7 @@
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
-      background: url('img2.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: #fff;
     }
 
     header {
@@ -42,20 +42,49 @@
       font-size: 1.3rem;
     }
 
-    main {
-      padding: 2rem 1rem;
-      background-color: rgba(255,255,255,0.9);
-    }
-
-    .hero {
-      max-width: 1000px;
-      margin: auto;
+    nav {
+      background-color: #fff;
+      padding: 1rem;
       text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--rosa);
+      font-weight: bold;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, var(--ciano), var(--rosa));
+      color: #fff;
+    }
+
+    .hero-section h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .hero-section .btn {
+      background-color: #fff;
+      color: var(--rosa);
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hero-section .btn:hover {
+      background-color: var(--rosa-dark);
+      color: #fff;
     }
 
     .swiper {
@@ -77,9 +106,20 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
+    .section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .section h3 {
+      color: var(--rosa);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
     form {
       max-width: 500px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       background: #fff;
       padding: 2rem;
       border-radius: 15px;
@@ -107,11 +147,6 @@
       background-color: var(--rosa-dark);
     }
 
-    .whatsapp-section {
-      text-align: center;
-      margin: 3rem 0;
-    }
-
     .btn {
       display: inline-block;
       background-color: var(--rosa);
@@ -127,6 +162,22 @@
       background-color: var(--rosa-dark);
     }
 
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: var(--ciano);
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--rosa-dark);
+    }
+
     footer {
       background-color: var(--ciano);
       color: #fff;
@@ -134,7 +185,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       text-align: center;
     }
 
@@ -175,13 +226,6 @@
       font-size: 0.8rem;
       margin-top: 1rem;
     }
-
-    @media (max-width: 600px) {
-      .swiper-slide img {
-        width: 280px;
-        height: 180px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -190,60 +234,60 @@
     <h1>Docinhos do Sul</h1>
     <p class="subtitle">Tornando seus momentos especiais inesquecíveis</p>
   </header>
+  <nav>
+    <a href="#orcamento">Orçamento</a>
+    <a href="#avaliacoes">Avaliações</a>
+  </nav>
 
-  <main>
-    <div class="hero">
-      <h2>Doces feitos com amor, tradição e aquele toque especial!</h2>
-      <p>Delicie-se com sabores únicos, ingredientes selecionados e um atendimento que encanta.</p>
+  <section class="hero-section">
+    <h2>Doces que encantam, momentos que ficam</h2>
+    <p>Especializados em tornar eventos inesquecíveis com o melhor da confeitaria</p>
+    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank">Faça seu pedido</a>
+  </section>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
+      <div class="swiper-slide"><img src="img2.jpg" alt="Docinho 2"></div>
+      <div class="swiper-slide"><img src="img3.jpg" alt="Docinho 3"></div>
+      <div class="swiper-slide"><img src="img4.jpg" alt="Docinho 4"></div>
     </div>
+  </div>
 
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
-        <div class="swiper-slide"><img src="img2.jpg" alt="Docinho 2"></div>
-        <div class="swiper-slide"><img src="img3.jpg" alt="Docinho 3"></div>
-        <div class="swiper-slide"><img src="img4.jpg" alt="Docinho 4"></div>
-        <div class="swiper-slide"><img src="img5.jpg" alt="Docinho 5"></div>
-        <div class="swiper-slide"><img src="img6.jpg" alt="Docinho 6"></div>
-        <div class="swiper-slide"><img src="img7.jpg" alt="Docinho 7"></div>
-        <div class="swiper-slide"><img src="img8.jpg" alt="Docinho 8"></div>
-      </div>
-    </div>
-
-    <form action="https://formsubmit.co/docinhosdosuloficial@gmail.com" method="POST">
+  <section class="section" id="orcamento">
+    <h3>Solicite um orçamento</h3>
+    <form action="https://api.whatsapp.com/send" method="get" target="_blank" onsubmit="return montarLinkWhatsapp(this);">
       <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required>
-      <textarea name="descricao" placeholder="Descreva seu orçamento" rows="4" required></textarea>
-      <input type="hidden" name="_subject" value="Novo Orçamento pelo site">
-      <input type="hidden" name="_captcha" value="false">
+      <input type="tel" name="telefone" placeholder="Telefone para contato" required>
+      <textarea name="mensagem" placeholder="Descreva seu pedido..." required></textarea>
       <input type="submit" value="Enviar orçamento">
     </form>
 
-    <div class="whatsapp-section">
-      <h3>Prefere falar direto com a gente?</h3>
-      <p>Solicite um orçamento rápido pelo WhatsApp!</p>
-      <a class="btn" href="https://wa.me/5541988722047" target="_blank">Falar no WhatsApp</a>
-    </div>
-  </main>
+    <p>Prefere falar direto com a gente? Solicite um orçamento rápido pelo WhatsApp!</p>
+    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
+  </section>
+
+  <!-- Elfsight All-in-One Reviews | Untitled All-in-One Reviews -->
+  <section id="avaliacoes">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-lazy></div>
+  </section>
 
   <footer>
     <div class="footer-social">
-      <a href="https://www.facebook.com/docinhosdosuloficial" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/docinhosdosuloficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
     </div>
     <div class="footer-address">
-      Rua Zacarias Alves Pereira, Centro - São José dos Pinhais - PR
+      <a href="https://maps.app.goo.gl/WoMVLETaY1RPwgVa8" target="_blank">Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais, PR</a>
     </div>
-    <div class="footer-contact-group">
-      <div class="footer-contact">
-        <a href="tel:+5541988722047"><i class="fa fa-phone"></i> (41) 9 8872-2047</a>
-      </div>
-      <div class="footer-contact">
-        <a href="mailto:docinhosdosuloficial@gmail.com"><i class="fa fa-envelope"></i> docinhosdosuloficial@gmail.com</a>
-      </div>
+    <div class="footer-contact-group" style="display: flex; gap: 2rem; justify-content: center;">
+      <div class="footer-contact"><i class="fas fa-phone"></i> <a href="tel:+5541988722047">(41) 98872-2047</a></div>
+      <div class="footer-contact"><i class="fas fa-envelope"></i> <a href="mailto:docinhosdosuloficial@gmail.com">docinhosdosuloficial@gmail.com</a></div>
     </div>
     <div class="copyright">
-      © 2025 Docinhos do Sul. Todos os direitos reservados.
+      &copy; 2025 Docinhos do Sul. Todos os direitos reservados.
     </div>
   </footer>
 
@@ -268,6 +312,16 @@
         }
       }
     });
+
+    function montarLinkWhatsapp(form) {
+      const nome = encodeURIComponent(form.nome.value);
+      const telefone = encodeURIComponent(form.telefone.value);
+      const mensagem = encodeURIComponent(form.mensagem.value);
+      const numero = '5541988722047';
+      const url = `https://api.whatsapp.com/send?phone=${numero}&text=Olá, meu nome é ${nome}. Telefone: ${telefone}. Pedido: ${mensagem}`;
+      window.open(url, '_blank');
+      return false;
+    }
   </script>
 </body>
 </html>
