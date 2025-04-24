@@ -171,4 +171,103 @@
       margin-right: 0.4rem;
     }
 
-    .copyrigh
+    .copyright {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .swiper-slide img {
+        width: 280px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Docinhos do Sul Logo">
+    <h1>Docinhos do Sul</h1>
+    <p class="subtitle">Tornando seus momentos especiais inesquecíveis</p>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h2>Doces feitos com amor, tradição e aquele toque especial!</h2>
+      <p>Delicie-se com sabores únicos, ingredientes selecionados e um atendimento que encanta.</p>
+    </div>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
+        <div class="swiper-slide"><img src="img2.jpg" alt="Docinho 2"></div>
+        <div class="swiper-slide"><img src="img3.jpg" alt="Docinho 3"></div>
+        <div class="swiper-slide"><img src="img4.jpg" alt="Docinho 4"></div>
+        <div class="swiper-slide"><img src="img5.jpg" alt="Docinho 5"></div>
+        <div class="swiper-slide"><img src="img6.jpg" alt="Docinho 6"></div>
+        <div class="swiper-slide"><img src="img7.jpg" alt="Docinho 7"></div>
+        <div class="swiper-slide"><img src="img8.jpg" alt="Docinho 8"></div>
+      </div>
+    </div>
+
+    <form action="https://formsubmit.co/docinhosdosuloficial@gmail.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="tel" name="whatsapp" placeholder="Seu WhatsApp" required>
+      <textarea name="descricao" placeholder="Descreva seu orçamento" rows="4" required></textarea>
+      <input type="hidden" name="_subject" value="Novo Orçamento pelo site">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="submit" value="Enviar orçamento">
+    </form>
+
+    <div class="whatsapp-section">
+      <h3>Prefere falar direto com a gente?</h3>
+      <p>Solicite um orçamento rápido pelo WhatsApp!</p>
+      <a class="btn" href="https://wa.me/5541988722047" target="_blank">Falar no WhatsApp</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/docinhosdosuloficial" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/docinhosdosuloficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-address">
+      Rua Zacarias Alves Pereira, Centro - São José dos Pinhais - PR
+    </div>
+    <div class="footer-contact-group">
+      <div class="footer-contact">
+        <a href="tel:+5541988722047"><i class="fa fa-phone"></i> (41) 9 8872-2047</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:docinhosdosuloficial@gmail.com"><i class="fa fa-envelope"></i> docinhosdosuloficial@gmail.com</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Docinhos do Sul. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      grabCursor: true,
+      centeredSlides: true,
+      breakpoints: {
+        600: {
+          slidesPerView: 2
+        },
+        900: {
+          slidesPerView: 3
+        }
+      }
+    });
+  </script>
+</body>
+</html>
