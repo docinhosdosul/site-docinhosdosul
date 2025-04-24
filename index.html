@@ -173,13 +173,17 @@
             const carousel = document.querySelector('.carousel');
             const totalItems = carousel.children.length;
             const visibleItems = 4;
-            const maxIndex = Math.ceil(totalItems / visibleItems) - 1;
+            const maxIndex = totalItems - visibleItems;
 
             currentIndex += direction;
-            if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-            const shift = currentIndex * 100;
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            } else if (currentIndex > maxIndex) {
+                currentIndex = 0;
+            }
+
+            const shift = currentIndex * (100 / visibleItems);
             carousel.style.transform = `translateX(-${shift}%)`;
         }
     </script>
