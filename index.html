@@ -138,7 +138,7 @@
             text-align: center; /* Centraliza o endereço */
         }
         .footer-social {
-            display: flex;
+            display: flex; /* Garante que os itens internos sejam flex */
             gap: 1rem;
             margin-bottom: 0.5rem;
             justify-content: center; /* Centraliza os ícones */
@@ -209,8 +209,8 @@
                 <img src="img10.jpg" alt="Docinho 10">
             </div>
             <div class="carousel-buttons">
-                <button onclick="showSlide(-1)">&lt;</button>
-                <button onclick="showSlide(1)">&gt;</button>
+                <button onclick="showSlide(-1)"><</button>
+                <button onclick="showSlide(1)">></button>
             </div>
         </div>
 
