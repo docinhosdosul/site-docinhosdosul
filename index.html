@@ -70,10 +70,10 @@
         }
         .carousel {
             display: flex;
-            gap: 1rem;
-            padding: 1rem 0;
-            animation: scroll 80s linear infinite;
-            width: max-content;
+            transition: transform 0.5s ease;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
         }
         .carousel img {
             width: 300px;
@@ -82,10 +82,28 @@
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             flex-shrink: 0;
+            scroll-snap-align: start;
+            margin: 0 0.5rem;
         }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .carousel-nav button {
+            background: #e91e63;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .carousel-nav button:hover {
+            background: #c2185b;
         }
         form {
             max-width: 500px;
@@ -162,6 +180,16 @@
             margin-top: 1rem;
         }
     </style>
+    <script>
+        function scrollCarousel(direction) {
+            const carousel = document.querySelector('.carousel');
+            const scrollAmount = 320;
+            carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+        window.onload = () => {
+            setInterval(() => scrollCarousel(1), 5000);
+        };
+    </script>
 </head>
 <body>
     <header>
@@ -194,6 +222,10 @@
                     <img src="img15.jpg" alt="Docinho 15">
                     <img src="img16.jpg" alt="Docinho 16">
                     <img src="img17.jpg" alt="Docinho 17">
+                </div>
+                <div class="carousel-nav">
+                    <button onclick="scrollCarousel(-1)">&#8592; Anterior</button>
+                    <button onclick="scrollCarousel(1)">Próximo &#8594;</button>
                 </div>
             </div>
 
