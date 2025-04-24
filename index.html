@@ -10,19 +10,30 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('img2.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
+            color: #333; /* Cor padrão do texto alterada para preto para melhor leitura */
             text-align: center;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            filter: blur(5px); /* Aplica um desfoque de 5 pixels */
+            position: relative; /* Necessário para posicionar o ::before */
+        }
+        body::before {
+            content: "";
+            position: fixed; /* Mantém o fundo fixo */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img2.jpg') no-repeat center center;
+            background-size: cover;
+            filter: blur(5px); /* Aplica o desfoque à imagem de fundo */
+            z-index: -1; /* Coloca a imagem atrás do conteúdo */
         }
         header {
             padding: 2rem;
             z-index: 10;
-            background-color: #00bcd4;
+            background-color: rgba(0, 188, 212, 0.8); /* Ciano com um pouco de transparência para o fundo desfocado aparecer */
+            color: #fff;
         }
         header img {
             max-width: 600px;
@@ -38,11 +49,11 @@
         .main-background {
             flex-grow: 1;
             padding: 2rem 1rem;
-            background-color: rgba(255, 192, 203, 0.2); /* Rosinha claro e um pouco transparente */
+            background-color: rgba(255, 192, 203, 0.5); /* Rosinha claro com mais visibilidade */
         }
         section {
             padding: 3rem 1rem;
-            background: rgba(255, 192, 203, 0.8); /* Rosinha claro com um pouco de transparência */
+            background-color: rgba(255, 255, 255, 0.8); /* Branco com um pouco de transparência para o fundo desfocado aparecer */
             color: #333;
             border-radius: 20px;
             margin: 2rem auto;
@@ -130,7 +141,7 @@
         }
         footer {
             padding: 2rem 1rem;
-            background-color: #00bcd4;
+            background-color: rgba(0, 188, 212, 0.8); /* Ciano com um pouco de transparência */
             color: #fff;
             font-size: 0.9rem;
             display: flex;
