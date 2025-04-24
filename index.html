@@ -10,7 +10,7 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #fff url('img2.jpg') no-repeat center center fixed;
+            background: url('img2.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             text-align: center;
@@ -37,11 +37,11 @@
         .main-background {
             flex-grow: 1;
             padding: 2rem 1rem;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 192, 203, 0.2); /* Rosinha claro e um pouco transparente */
         }
         section {
             padding: 3rem 1rem;
-            background: #fff;
+            background: rgba(255, 192, 203, 0.8); /* Rosinha claro com um pouco de transparência */
             color: #333;
             border-radius: 20px;
             margin: 2rem auto;
@@ -224,8 +224,8 @@
                     <img src="img17.jpg" alt="Docinho 17">
                 </div>
                 <div class="carousel-nav">
-                    <button onclick="scrollCarousel(-1)">&#8592; Anterior</button>
-                    <button onclick="scrollCarousel(1)">Próximo &#8594;</button>
+                    <button onclick="scrollCarousel(-1)">← Anterior</button>
+                    <button onclick="scrollCarousel(1)">Próximo →</button>
                 </div>
             </div>
 
