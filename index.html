@@ -242,4 +242,79 @@
     <section class="hero-section">
         <h2>Doces que encantam, momentos que ficam</h2>
         <p>Especializados em tornar eventos inesquecíveis com o melhor da confeitaria</p>
-        <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank
+        <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank">Faça seu pedido</a>
+    </section>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
+            <div class="swiper-slide"><img src="img2.jpg" alt="Docinho 2"></div>
+            <div class="swiper-slide"><img src="img3.jpg" alt="Docinho 3"></div>
+            <div class="swiper-slide"><img src="img4.jpg" alt="Docinho 4"></div>
+        </div>
+    </div>
+
+    <section class="section" id="orcamento">
+        <h3>Solicite um orçamento</h3>
+        <form action="https://formsubmit.co/docinhosdosuloficial@gmail.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="tel" name="telefone" placeholder="Telefone para contato" required>
+            <textarea name="mensagem" placeholder="Descreva seu pedido..." required></textarea>
+            <input type="hidden" name="_subject" value="Novo Orçamento pelo Site">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="submit" value="Enviar orçamento">
+        </form>
+
+        <p>Prefere falar direto com a gente? Solicite um orçamento rápido pelo WhatsApp!</p>
+        <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
+    </section>
+
+    <section id="avaliacoes">
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-lazy></div>
+    </section>
+
+    <footer>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="footer-address">
+            <a href="https://maps.app.goo.gl/WoMVLETaY1RPwgVa8" target="_blank">Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais, PR</a>
+        </div>
+        <div class="footer-contact-group" style="display: flex; gap: 2rem; justify-content: center;">
+            <div class="footer-contact"><i class="fas fa-phone"></i> <a href="tel:+5541988722047">(41) 98872-2047</a></div>
+            <div class="footer-contact"><i class="fas fa-envelope"></i> <a href="mailto:docinhosdosuloficial@gmail.com">docinhosdosuloficial@gmail.com</a></div>
+        </div>
+        <div class="copyright">
+            © 2025 Docinhos do Sul. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            grabCursor: true,
+            centeredSlides: true,
+            breakpoints: {
+                600: {
+                    slidesPerView: 2
+                },
+                900: {
+                    slidesPerView: 3
+                }
+            }
+        });
+
+        // A função montarLinkWhatsapp foi removida do formulário
+    </script>
+</body>
+</html>
