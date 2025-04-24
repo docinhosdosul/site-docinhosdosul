@@ -13,6 +13,9 @@
             background: linear-gradient(to bottom right, #00bcd4, #ff4081);
             color: #fff;
             text-align: center;
+            display: flex; /* Habilita o Flexbox */
+            flex-direction: column; /* Organiza os filhos em coluna */
+            min-height: 100vh; /* Garante que o body tenha pelo menos a altura da tela */
         }
         header {
             padding: 2rem;
@@ -35,7 +38,7 @@
             background-attachment: fixed; /* Opcional, mantém o fundo fixo */
             background-color: rgba(255, 192, 203, 0.1); /* Rosa bem transparente */
             background-blend-mode: overlay;
-            min-height: 600px; /* Ajuste este valor conforme necessário */
+            flex-grow: 1; /* Faz com que este elemento cresça para ocupar o espaço disponível */
         }
         section {
             padding: 3rem 1rem;
