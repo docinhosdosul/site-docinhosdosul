@@ -106,7 +106,7 @@
     }
 
     .swiper-slide img {
-      width: 420px;
+      width: 100%;
       height: 280px;
       object-fit: cover;
       border-radius: 15px;
@@ -149,14 +149,6 @@
     .menu-item p {
       font-weight: bold;
       color: #333;
-    }
-
-    .menu-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1rem;
     }
 
     form {
@@ -290,7 +282,6 @@
     <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank">Faça seu pedido</a>
   </section>
 
-  <!-- Swiper Section (Carrossel automático e interativo) -->
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
@@ -311,7 +302,6 @@
       <div class="swiper-slide"><img src="img16.jpg" alt="Docinho 16"></div>
       <div class="swiper-slide"><img src="img17.jpg" alt="Docinho 17"></div>
     </div>
-    <!-- Bolinhas de seleção (paginador) -->
     <div class="swiper-pagination"></div>
   </div>
 
@@ -376,44 +366,43 @@
 
   <section id="avaliacoes">
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-latest="true"></div>
+    <div class="elfsight-app-b1d4ec21-285a-4d61-94d7-209ef5f83fe4"></div>
   </section>
 
   <footer>
     <div class="footer-social">
-      <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/docinhosdosuloficial" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/docinhosdosuloficial" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
-
     <div class="footer-contact">
       <div class="footer-contact-group">
-        <i class="fa-solid fa-phone"></i> (41) 99872-2047
+        <i class="fas fa-phone-alt"></i><span>(41) 99872-2047</span>
       </div>
       <div class="footer-contact-group">
-        <i class="fa-solid fa-envelope"></i> docinhosdosuloficial@gmail.com
+        <i class="fas fa-envelope"></i><span>docinhosdosuloficial@gmail.com</span>
       </div>
     </div>
-
     <div class="footer-address">
-      <p>Rua Zacarias Alves Pereira, 113 - Aristocráta, Ponta Grossa/PR</p>
+      <span>Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais/PR</span>
     </div>
-
     <div class="copyright">
-      <p>&copy; 2025 Docinhos do Sul - Todos os direitos reservados.</p>
+      <span>© 2025 Docinhos do Sul - Todos os direitos reservados</span>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
-      loop: true, // Torna o carrossel infinito
+      slidesPerView: 3,
+      spaceBetween: 10,
+      loop: true,
       autoplay: {
-        delay: 2500, // Intervalo entre as transições das imagens
+        delay: 2500,
         disableOnInteraction: false,
       },
       pagination: {
         el: '.swiper-pagination',
-        clickable: true, // Permite clicar nas bolinhas de seleção
+        clickable: true,
       },
     });
   </script>
