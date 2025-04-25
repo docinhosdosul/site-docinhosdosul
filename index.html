@@ -151,6 +151,14 @@
       color: #333;
     }
 
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
     form {
       max-width: 500px;
       margin: 2rem auto;
@@ -282,6 +290,7 @@
     <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank">Faça seu pedido</a>
   </section>
 
+  <!-- Swiper Section (Carrossel automático e interativo) -->
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
@@ -302,6 +311,7 @@
       <div class="swiper-slide"><img src="img16.jpg" alt="Docinho 16"></div>
       <div class="swiper-slide"><img src="img17.jpg" alt="Docinho 17"></div>
     </div>
+    <!-- Bolinhas de seleção (paginador) -->
     <div class="swiper-pagination"></div>
   </div>
 
@@ -385,7 +395,7 @@
     </div>
 
     <div class="footer-address">
-      <p>Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais - PR</p>
+      <p>Rua Zacarias Alves Pereira, 113 - Aristocráta, Ponta Grossa/PR</p>
     </div>
 
     <div class="copyright">
@@ -395,18 +405,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper('.swiper', {
-      loop: true,
+    const swiper = new Swiper('.swiper', {
+      loop: true, // Torna o carrossel infinito
       autoplay: {
-        delay: 3000,
+        delay: 2500, // Intervalo entre as transições das imagens
+        disableOnInteraction: false,
       },
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        clickable: true, // Permite clicar nas bolinhas de seleção
       },
     });
   </script>
