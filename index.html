@@ -215,22 +215,22 @@
     footer {
       background-color: var(--ciano);
       color: #fff;
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
       text-align: center;
     }
 
     .footer-social {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
+      font-size: 1.5rem;
     }
 
     .footer-social a {
       color: #fff;
-      font-size: 1.5rem;
       transition: transform 0.3s;
     }
 
@@ -238,18 +238,11 @@
       transform: scale(1.2);
     }
 
-    .footer-address,
-    .footer-contact-group {
-      font-size: 0.95rem;
-    }
-
-    .footer-contact a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .footer-contact a:hover {
-      text-decoration: underline;
+    .footer-contact {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 1.1rem;
     }
 
     .footer-contact i {
@@ -258,6 +251,11 @@
 
     .footer-contact-group {
       gap: 1rem;
+    }
+
+    .footer-address {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
     }
 
     .copyright {
@@ -304,6 +302,7 @@
       <div class="swiper-slide"><img src="img16.jpg" alt="Docinho 16"></div>
       <div class="swiper-slide"><img src="img17.jpg" alt="Docinho 17"></div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 
   <section class="section">
@@ -352,41 +351,64 @@
     </div>
   </section>
 
-  <section class="section" id="orcamento">
-    <h3>Solicite um orçamento</h3>
-    <form action="https://formsubmit.co/docinhosdosuloficial@gmail.com" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="tel" name="telefone" placeholder="Telefone para contato" required>
-      <textarea name="mensagem" placeholder="Descreva seu pedido..." required></textarea>
-      <input type="hidden" name="_subject" value="Novo Orçamento pelo Site">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="submit" value="Enviar orçamento">
+  <section id="orcamento" class="section">
+    <h3>Solicite seu Orçamento</h3>
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu E-mail" required>
+      <textarea name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+      <input type="submit" value="Enviar Orçamento">
     </form>
-    <p>Prefere falar direto com a gente? Solicite um orçamento rápido pelo WhatsApp!</p>
+
+    <p>Se preferir, nos chame no WhatsApp:</p>
     <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
   </section>
 
   <section id="avaliacoes">
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-lazy></div>
+    <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-latest="true"></div>
   </section>
 
   <footer>
     <div class="footer-social">
-      <a href="https://www.instagram.com/docinhosdosuloficial/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/docinhosdosuloficial" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://api.whatsapp.com/send?phone=5541988722047" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
     </div>
+
+    <div class="footer-contact">
+      <div class="footer-contact-group">
+        <i class="fa-solid fa-phone"></i> (41) 99872-2047
+      </div>
+      <div class="footer-contact-group">
+        <i class="fa-solid fa-envelope"></i> docinhosdosuloficial@gmail.com
+      </div>
+    </div>
+
     <div class="footer-address">
-      <a href="https://maps.app.goo.gl/WoMVLETaY1RPwgVa8" target="_blank">Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais, PR</a>
+      <p>Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais - PR</p>
     </div>
-    <div class="footer-contact-group" style="display: flex; gap: 1rem; justify-content: center;">
-      <div class="footer-contact"><i class="fas fa-phone"></i> <a href="tel:+5541988722047">(41) 98872-2047</a></div>
-      <div class="footer-contact"><i class="fas fa-envelope"></i> <a href="mailto:docinhosdosuloficial@gmail.com">docinhosdosuloficial@gmail.com</a></div>
-    </div>
+
     <div class="copyright">
-      © 2025 Docinhos do Sul. Todos os direitos reservados.
+      <p>&copy; 2025 Docinhos do Sul - Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 </html>
