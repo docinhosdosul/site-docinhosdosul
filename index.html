@@ -1,423 +1,827 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docinhos do Sul - Doceria & Confeitaria</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMHJ90BPPL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LMHJ90BPPL');
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <meta name="google-site-verification" content="_d4K6QoJKbmokGh6H46GbO44z_HRTj9-_X6PLLSBsh8" />
-  <style>
-    :root {
-      --ciano: #00bcd4;
-      --rosa: #e91e63;
-      --rosa-dark: #c2185b;
-    }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      background: #fff;
-    }
+  <meta charset="UTF-8" />
 
-    header {
-      background-color: var(--ciano);
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    header img {
-      max-width: 300px;
-    }
+  <title>Docinhos do Sul - Doceria & Confeitaria</title>
 
-    h1 {
-      font-size: 2.8rem;
-      margin: 1rem 0 0.5rem;
-    }
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMHJ90BPPL"></script>
 
-    .subtitle {
-      font-size: 1.3rem;
-    }
+  <script>
 
-    nav {
-      background-color: #fff;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+    window.dataLayer = window.dataLayer || [];
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: var(--rosa);
-      font-weight: bold;
-    }
+    function gtag(){dataLayer.push(arguments);}
 
-    .hero-section {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(to right, var(--ciano), var(--rosa));
-      color: #fff;
-    }
+    gtag('js', new Date());
 
-    .hero-section h2 {
-      font-size: 2.5rem;
-    }
+    gtag('config', 'G-LMHJ90BPPL');
 
-    .hero-section p {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
+  </script>
 
-    .hero-section .btn {
-      background-color: #fff;
-      color: var(--rosa);
-      padding: 1rem 2rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    .hero-section .btn:hover {
-      background-color: var(--rosa-dark);
-      color: #fff;
-    }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    .swiper {
-      width: 100%;
-      padding: 2rem 0;
-    }
+  <link rel="icon" href="favicon.png" type="image/x-icon">
 
-    .swiper-slide {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-    }
+  <meta name="google-site-verification" content="_d4K6QoJKbmokGh6H46GbO44z_HRTj9-_X6PLLSBsh8" />
 
-    .swiper-slide img {
-      width: 420px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
+  <style>
 
-    .section {
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+    :root {
 
-    .section h3 {
-      color: var(--rosa);
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+      --ciano: #00bcd4;
 
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      max-width: 1000px;
-      margin: 0 auto 2rem;
-    }
+      --rosa: #e91e63;
 
-    .menu-item {
-      background-color: #fdfdfd;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      text-align: center;
-      border-top: 4px solid var(--rosa);
-      overflow: hidden; /* Adicionado para garantir que o zoom não vaze */
-    }
+      --rosa-dark: #c2185b;
 
-    .menu-item h4 {
-      margin-bottom: 0.5rem;
-      color: var(--rosa-dark);
-    }
+    }
 
-    .menu-item p {
-      font-weight: bold;
-      color: #333;
-    }
 
-    .menu-item img {
-      width: 100%;
-      height: auto;
-      max-height: 150px; /* Ajuste este valor conforme necessário */
-      object-fit: cover;
-      border-radius: 10px; /* Opcional */
-      transition: transform 0.3s ease-in-out;
-    }
 
-    .menu-item:hover img {
-      transform: scale(1.1);
-    }
+    body {
 
-    form {
-      max-width: 500px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+      margin: 0;
 
-    input, textarea {
-      padding: 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    input[type="submit"] {
-      background-color: var(--rosa);
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+      color: #333;
 
-    input[type="submit"]:hover {
-      background-color: var(--rosa-dark);
-    }
+      background: #fff;
 
-    .btn {
-      display: inline-block;
-      background-color: var(--rosa);
-      color: #fff;
-      padding: 0.8rem 2rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
+    }
 
-    .btn:hover {
-      background-color: var(--rosa-dark);
-    }
 
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: var(--ciano);
-      color: #fff;
-      padding: 0.8rem 2rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
-    }
 
-    .btn-whatsapp:hover {
-      background-color: var(--rosa-dark);
-    }
+    header {
 
-    footer {
-      background-color: var(--ciano);
-      color: #fff;
-      padding: 1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      text-align: center;
-    }
+      background-color: var(--ciano);
 
-    .footer-social {
-      display: flex;
-      gap: 1.5rem;
-      font-size: 1.5rem;
-    }
+      color: #fff;
 
-    .footer-social a {
-      color: #fff;
-      transition: transform 0.3s;
-    }
+      padding: 2rem 1rem;
 
-    .footer-social a:hover {
-      transform: scale(1.2);
-    }
+      text-align: center;
 
-    .footer-contact {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      font-size: 1.1rem;
-    }
+    }
 
-    .footer-contact i {
-      margin-right: 0.4rem;
-    }
 
-    .footer-contact-group {
-      gap: 1rem;
-    }
 
-    .footer-address {
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
+    header img {
 
-    .copyright {
-      font-size: 0.8rem;
-      margin-top: 1rem;
-    }
-  </style>
+      max-width: 300px;
+
+    }
+
+
+
+    h1 {
+
+      font-size: 2.8rem;
+
+      margin: 1rem 0 0.5rem;
+
+    }
+
+
+
+    .subtitle {
+
+      font-size: 1.3rem;
+
+    }
+
+
+
+    nav {
+
+      background-color: #fff;
+
+      padding: 1rem;
+
+      text-align: center;
+
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    }
+
+
+
+    nav a {
+
+      margin: 0 1rem;
+
+      text-decoration: none;
+
+      color: var(--rosa);
+
+      font-weight: bold;
+
+    }
+
+
+
+    .hero-section {
+
+      text-align: center;
+
+      padding: 3rem 1rem;
+
+      background: linear-gradient(to right, var(--ciano), var(--rosa));
+
+      color: #fff;
+
+    }
+
+
+
+    .hero-section h2 {
+
+      font-size: 2.5rem;
+
+    }
+
+
+
+    .hero-section p {
+
+      font-size: 1.2rem;
+
+      margin: 1rem 0;
+
+    }
+
+
+
+    .hero-section .btn {
+
+      background-color: #fff;
+
+      color: var(--rosa);
+
+      padding: 1rem 2rem;
+
+      border-radius: 25px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+
+    }
+
+
+
+    .hero-section .btn:hover {
+
+      background-color: var(--rosa-dark);
+
+      color: #fff;
+
+    }
+
+
+
+    .swiper {
+
+      width: 100%;
+
+      padding: 2rem 0;
+
+    }
+
+
+
+    .swiper-slide {
+
+      text-align: center;
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+
+
+    .swiper-slide img {
+
+      width: 420px;
+
+      height: 280px;
+
+      object-fit: cover;
+
+      border-radius: 15px;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    }
+
+
+
+    .section {
+
+      padding: 2rem 1rem;
+
+      text-align: center;
+
+    }
+
+
+
+    .section h3 {
+
+      color: var(--rosa);
+
+      font-size: 2rem;
+
+      margin-bottom: 1rem;
+
+    }
+
+
+
+    .menu-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 1.5rem;
+
+      max-width: 1000px;
+
+      margin: 0 auto 2rem;
+
+    }
+
+
+
+    .menu-item {
+
+      background-color: #fdfdfd;
+
+      border-radius: 15px;
+
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+      padding: 1.5rem;
+
+      text-align: center;
+
+      border-top: 4px solid var(--rosa);
+
+    }
+
+
+
+    .menu-item h4 {
+
+      margin-bottom: 0.5rem;
+
+      color: var(--rosa-dark);
+
+    }
+
+
+
+    .menu-item p {
+
+      font-weight: bold;
+
+      color: #333;
+
+    }
+
+
+
+    form {
+
+      max-width: 500px;
+
+      margin: 2rem auto;
+
+      background: #fff;
+
+      padding: 2rem;
+
+      border-radius: 15px;
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 1rem;
+
+    }
+
+
+
+    input, textarea {
+
+      padding: 1rem;
+
+      border-radius: 10px;
+
+      border: 1px solid #ccc;
+
+      font-size: 1rem;
+
+    }
+
+
+
+    input[type="submit"] {
+
+      background-color: var(--rosa);
+
+      color: #fff;
+
+      cursor: pointer;
+
+      transition: background 0.3s ease;
+
+    }
+
+
+
+    input[type="submit"]:hover {
+
+      background-color: var(--rosa-dark);
+
+    }
+
+
+
+    .btn {
+
+      display: inline-block;
+
+      background-color: var(--rosa);
+
+      color: #fff;
+
+      padding: 0.8rem 2rem;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: background 0.3s ease;
+
+    }
+
+
+
+    .btn:hover {
+
+      background-color: var(--rosa-dark);
+
+    }
+
+
+
+    .btn-whatsapp {
+
+      display: inline-block;
+
+      background-color: var(--ciano);
+
+      color: #fff;
+
+      padding: 0.8rem 2rem;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      margin-top: 1rem;
+
+      transition: background 0.3s ease;
+
+    }
+
+
+
+    .btn-whatsapp:hover {
+
+      background-color: var(--rosa-dark);
+
+    }
+
+
+
+    footer {
+
+      background-color: var(--ciano);
+
+      color: #fff;
+
+      padding: 1rem 1rem;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 1rem;
+
+      text-align: center;
+
+    }
+
+
+
+    .footer-social {
+
+      display: flex;
+
+      gap: 1.5rem;
+
+      font-size: 1.5rem;
+
+    }
+
+
+
+    .footer-social a {
+
+      color: #fff;
+
+      transition: transform 0.3s;
+
+    }
+
+
+
+    .footer-social a:hover {
+
+      transform: scale(1.2);
+
+    }
+
+
+
+    .footer-contact {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 1.5rem;
+
+      font-size: 1.1rem;
+
+    }
+
+
+
+    .footer-contact i {
+
+      margin-right: 0.4rem;
+
+    }
+
+
+
+    .footer-contact-group {
+
+      gap: 1rem;
+
+    }
+
+
+
+    .footer-address {
+
+      font-size: 0.95rem;
+
+      margin-top: 0.5rem;
+
+    }
+
+
+
+    .copyright {
+
+      font-size: 0.8rem;
+
+      margin-top: 1rem;
+
+    }
+
+  </style>
+
 </head>
+
 <body>
-  <header>
-    <img src="logo.png" alt="Docinhos do Sul Logo">
-    <h1>Docinhos do Sul</h1>
-    <p class="subtitle">Tornando seus momentos especiais inesquecíveis</p>
-  </header>
 
-  <nav>
-    <a href="#orcamento">Orçamento</a>
-    <a href="#avaliacoes">Avaliações</a>
-  </nav>
+  <header>
 
-  <section class="hero-section">
-    <h2>Doces que encantam, momentos que ficam</h2>
-    <p>Especializados em tornar eventos inesquecíveis com o melhor da confeitaria</p>
-    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank">Faça seu pedido</a>
-  </section>
+    <img src="logo.png" alt="Docinhos do Sul Logo">
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
-      <div class="swiper-slide"><img src="img2.jpg" alt="Docinho 2"></div>
-      <div class="swiper-slide"><img src="img3.jpg" alt="Docinho 3"></div>
-      <div class="swiper-slide"><img src="img4.jpg" alt="Docinho 4"></div>
-      <div class="swiper-slide"><img src="img5.jpg" alt="Docinho 5"></div>
-      <div class="swiper-slide"><img src="img6.jpg" alt="Docinho 6"></div>
-      <div class="swiper-slide"><img src="img7.jpg" alt="Docinho 7"></div>
-      <div class="swiper-slide"><img src="img8.jpg" alt="Docinho 8"></div>
-      <div class="swiper-slide"><img src="img9.jpg" alt="Docinho 9"></div>
-      <div class="swiper-slide"><img src="img10.jpg" alt="Docinho 10"></div>
-      <div class="swiper-slide"><img src="img11.jpg" alt="Docinho 11"></div>
-      <div class="swiper-slide"><img src="img12.jpg" alt="Docinho 12"></div>
-      <div class="swiper-slide"><img src="img13.jpg" alt="Docinho 13"></div>
-      <div class="swiper-slide"><img src="img14.jpg" alt="Docinho 14"></div>
-      <div class="swiper-slide"><img src="img15.jpg" alt="Docinho 15"></div>
-      <div class="swiper-slide"><img src="img16.jpg" alt="Docinho 16"></div>
-      <div class="swiper-slide"><img src="img17.jpg" alt="Docinho 17"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
+    <h1>Docinhos do Sul</h1>
 
-  <section class="section">
-    <h3>Cardápio</h3>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="img18.png" alt="Bolo Decoração de Chantilly">
-        <h4>Bolo Decoração de Chantilly</h4>
-        <p>R$ 75,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img19.png" alt="Caixinha de 4 Docinhos">
-        <h4>Caixinha de 4 Docinhos</h4>
-        <p>R$ 10,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img20.png" alt="Caixinha com 8 Docinhos">
-        <h4>Caixinha com 8 Docinhos</h4>
-        <p>R$ 19,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img21.png" alt="Caixa de 50 Doces Tradicionais">
-        <h4>Caixa de 50 Doces Tradicionais</h4>
-        <p>R$ 60,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img22.png" alt="Caixa de 100 Docinhos Tradicionais">
-        <h4>Caixa de 100 Docinhos Tradicionais</h4>
-        <p>R$ 110,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img23.png" alt="Caixa com 50 Docinhos Gourmet">
-        <h4>Caixa com 50 Docinhos Gourmet</h4>
-        <p>R$ 75,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img24.png" alt="Caixa com 100 Docinhos Gourmet">
-        <h4>Caixa com 100 Docinhos Gourmet</h4>
-        <p>R$ 140,00</p>
-      </div>
-      <div class="menu-item">
-        <img src="img25.png" alt="Bentô Cake">
-        <h4>Bentô Cake</h4>
-        <p>R$ 35,00</p>
-      </div>
-    </div>
-  </section>
+    <p class="subtitle">Tornando seus momentos especiais inesquecíveis</p>
 
-  <section id="orcamento" class="section">
-    <h3>Solicite seu Orçamento</h3>
-    <form action="submit_form.php" method="POST">
-      <input type="text" name="nome" placeholder="Seu Nome" required>
-      <input type="email" name="email" placeholder="Seu E-mail" required>
-      <textarea name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
-      <input type="submit" value="Enviar Orçamento">
-    </form>
+  </header>
 
-    <p>Se preferir, nos chame no WhatsApp:</p>
-    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
-  </section>
 
-  <section id="avaliacoes">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-latest="true"></div>
-  </section>
 
-  <footer>
-    <div class="footer-social">
-      <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-    </div>
+  <nav>
 
-    <div class="footer-contact">
-      <div class="footer-contact-group">
-        <i class="fa-solid fa-phone"></i> (41) 99872-2047
-      </div>
-      <div class="footer-contact-group">
-        <i class="fa-solid fa-envelope"></i> docinhosdosuloficial@gmail.com
-      </div>
-    </div>
+    <a href="#orcamento">Orçamento</a>
 
-    <div class="footer-address">
-      <p>Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais - PR</p>
-    </div>
+    <a href="#avaliacoes">Avaliações</a>
 
-    <div class="copyright">
-      <p>&copy; 2025 Docinhos do Sul - Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-</script>
+
+
+  <section class="hero-section">
+
+    <h2>Doces que encantam, momentos que ficam</h2>
+
+    <p>Especializados em tornar eventos inesquecíveis com o melhor da confeitaria</p>
+
+    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn" target="_blank">Faça seu pedido</a>
+
+  </section>
+
+
+
+  <div class="swiper">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide"><img src="img1.jpg" alt="Docinho 1"></div>
+
+      <div class="swiper-slide"><img src="img2.jpg" alt="Docinho 2"></div>
+
+      <div class="swiper-slide"><img src="img3.jpg" alt="Docinho 3"></div>
+
+      <div class="swiper-slide"><img src="img4.jpg" alt="Docinho 4"></div>
+
+      <div class="swiper-slide"><img src="img5.jpg" alt="Docinho 5"></div>
+
+      <div class="swiper-slide"><img src="img6.jpg" alt="Docinho 6"></div>
+
+      <div class="swiper-slide"><img src="img7.jpg" alt="Docinho 7"></div>
+
+      <div class="swiper-slide"><img src="img8.jpg" alt="Docinho 8"></div>
+
+      <div class="swiper-slide"><img src="img9.jpg" alt="Docinho 9"></div>
+
+      <div class="swiper-slide"><img src="img10.jpg" alt="Docinho 10"></div>
+
+      <div class="swiper-slide"><img src="img11.jpg" alt="Docinho 11"></div>
+
+      <div class="swiper-slide"><img src="img12.jpg" alt="Docinho 12"></div>
+
+      <div class="swiper-slide"><img src="img13.jpg" alt="Docinho 13"></div>
+
+      <div class="swiper-slide"><img src="img14.jpg" alt="Docinho 14"></div>
+
+      <div class="swiper-slide"><img src="img15.jpg" alt="Docinho 15"></div>
+
+      <div class="swiper-slide"><img src="img16.jpg" alt="Docinho 16"></div>
+
+      <div class="swiper-slide"><img src="img17.jpg" alt="Docinho 17"></div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+  </div>
+
+
+
+  <section class="section">
+
+    <h3>Cardápio</h3>
+
+    <div class="menu-grid">
+
+      <div class="menu-item">
+
+        <img src="img18.png" alt="Bolo Decoração de Chantilly">
+
+        <h4>Bolo Decoração de Chantilly</h4>
+
+        <p>R$ 75,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img19.png" alt="Caixinha de 4 Docinhos">
+
+        <h4>Caixinha de 4 Docinhos</h4>
+
+        <p>R$ 10,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img20.png" alt="Caixinha com 8 Docinhos">
+
+        <h4>Caixinha com 8 Docinhos</h4>
+
+        <p>R$ 19,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img21.png" alt="Caixa de 50 Doces Tradicionais">
+
+        <h4>Caixa de 50 Doces Tradicionais</h4>
+
+        <p>R$ 60,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img22.png" alt="Caixa de 100 Docinhos Tradicionais">
+
+        <h4>Caixa de 100 Docinhos Tradicionais</h4>
+
+        <p>R$ 110,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img23.png" alt="Caixa com 50 Docinhos Gourmet">
+
+        <h4>Caixa com 50 Docinhos Gourmet</h4>
+
+        <p>R$ 75,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img24.png" alt="Caixa com 100 Docinhos Gourmet">
+
+        <h4>Caixa com 100 Docinhos Gourmet</h4>
+
+        <p>R$ 140,00</p>
+
+      </div>
+
+      <div class="menu-item">
+
+        <img src="img25.png" alt="Bentô Cake">
+
+        <h4>Bentô Cake</h4>
+
+        <p>R$ 35,00</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="orcamento" class="section">
+
+    <h3>Solicite seu Orçamento</h3>
+
+    <form action="submit_form.php" method="POST">
+
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+
+      <input type="email" name="email" placeholder="Seu E-mail" required>
+
+      <textarea name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+
+      <input type="submit" value="Enviar Orçamento">
+
+    </form>
+
+
+
+    <p>Se preferir, nos chame no WhatsApp:</p>
+
+    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-whatsapp" target="_blank">Chamar no WhatsApp</a>
+
+  </section>
+
+
+
+  <section id="avaliacoes">
+
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+    <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-latest="true"></div>
+
+  </section>
+
+
+
+  <footer>
+
+    <div class="footer-social">
+
+      <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+
+      <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+
+    </div>
+
+
+
+    <div class="footer-contact">
+
+      <div class="footer-contact-group">
+
+        <i class="fa-solid fa-phone"></i> (41) 99872-2047
+
+      </div>
+
+      <div class="footer-contact-group">
+
+        <i class="fa-solid fa-envelope"></i> docinhosdosuloficial@gmail.com
+
+      </div>
+
+    </div>
+
+
+
+    <div class="footer-address">
+
+      <p>Rua Zacarias Alves Pereira, 113 - Aristocráta, São José dos Pinhais - PR</p>
+
+    </div>
+
+
+
+    <div class="copyright">
+
+      <p>&copy; 2025 Docinhos do Sul - Todos os direitos reservados.</p>
+
+    </div>
+
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+
+    var swiper = new Swiper('.swiper', {
+
+      loop: true,
+
+      autoplay: {
+
+        delay: 3000,
+
+      },
+
+      pagination: {
+
+        el: '.swiper-pagination',
+
+        clickable: true,
+
+      },
+
+      navigation: {
+
+        nextEl: '.swiper-button-next',
+
+        prevEl: '.swiper-button-prev',
+
+      },
+
+    });
+
+  </script>
+
+</body>
+
+</html>
