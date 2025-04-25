@@ -139,6 +139,7 @@
       padding: 1.5rem;
       text-align: center;
       border-top: 4px solid var(--rosa);
+      overflow: hidden; /* Adicionado para garantir que o zoom não vaze */
     }
 
     .menu-item h4 {
@@ -149,6 +150,19 @@
     .menu-item p {
       font-weight: bold;
       color: #333;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: auto;
+      max-height: 150px; /* Ajuste este valor conforme necessário */
+      object-fit: cover;
+      border-radius: 10px; /* Opcional */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-item:hover img {
+      transform: scale(1.1);
     }
 
     form {
@@ -399,16 +413,11 @@
       loop: true,
       autoplay: {
         delay: 3000,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-</body>
-</html>
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
