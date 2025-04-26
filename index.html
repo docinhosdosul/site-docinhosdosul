@@ -229,23 +229,64 @@ margin-right: 0.4rem;
 font-size: 0.8rem;
 margin-top: 1rem;
 }
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--ciano);
+}
+
+.logo-img {
+  max-height: 100px;
+  width: auto;
+}
+
+.btn-header {
+  background-color: #fff;
+  color: var(--rosa);
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-header:hover {
+  background-color: var(--rosa-dark);
+  color: #fff;
+}
+
+.menu {
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--rosa);
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
-<header style="background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-  <div style="display: flex; align-items: center; gap: 1rem;">
-    <img src="logo.png" alt="Docinhos do Sul" style="height: 60px;">
-    <span style="font-family: 'Amarillo', cursive; font-size: 2rem; color: var(--rosa);">Docinhos do Sul</span>
+<header class="topo">
+  <div class="header-container">
+    <img src="logo.png" alt="Logo Docinhos do Sul" class="logo-img">
+    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-header" target="_blank">
+      Fazer pedido
+    </a>
   </div>
-  <nav style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-    <a href="#orcamento" style="text-decoration: none; color: var(--rosa-dark); font-weight: bold;">Orçamento</a>
-    <a href="#avaliacoes" style="text-decoration: none; color: var(--rosa-dark); font-weight: bold;">Avaliações</a>
-    <a href="#produtos" style="text-decoration: none; color: var(--rosa-dark); font-weight: bold;">Produtos</a>
-    <a href="#contato" style="text-decoration: none; color: var(--rosa-dark); font-weight: bold;">Contato</a>
+
+  <nav class="menu">
+    <a href="#orcamento">Orçamento</a>
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
   </nav>
-  <a href="https://api.whatsapp.com/send?phone=5541988722047" target="_blank" style="background-color: var(--ciano); color: #fff; padding: 0.8rem 1.5rem; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 1rem;">
-    Fazer pedido
-  </a>
 </header>
 <nav>
 <a href="#orcamento">Orçamento</a>
