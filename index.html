@@ -90,12 +90,19 @@ text-align: center;
 display: flex;
 justify-content: center;
 }
-.swiper-slide img {
-width: 420px;
-height: 280px;
-object-fit: cover;
-border-radius: 15px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.swiper-slide img,
+.menu-item img {
+  width: 420px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease; /* ANIMAÇÃO SUAVE */
+}
+
+.swiper-slide img:hover,
+.menu-item img:hover {
+  transform: scale(1.08); /* ZOOM ao passar o mouse */
 }
 .section {
 padding: 2rem 1rem;
