@@ -315,7 +315,21 @@ margin-top: 1rem;
 </section>
 <section class="section" id="orcamento">
 <h3>Solicite um orçamento</h3>
-<form action="https://formsubmit.co/docinhosdosuloficial@gmail.com" method="POST">
+<form id="form-orcamento">
+<div id="mensagem-sucesso" style="
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+">
+  Orçamento enviado com sucesso!<br>Em breve retornaremos seu orçamento via WhatsApp 💬
+</div>
 <input type="text" name="nome" placeholder="Seu nome" required>
 <input type="tel" name="telefone" placeholder="Telefone para contato" required>
 <textarea name="mensagem" placeholder="Descreva seu pedido..." required></textarea>
@@ -363,6 +377,41 @@ breakpoints: {
 600: { slidesPerView: 2 },
 900: { slidesPerView: 3 }
 }
+});
+</script>
+<script>
+document.getElementById("form-orcamento").addEventListener("submit", function(event) {
+  event.preventDefault(); // impede envio padrão
+  const form = event.target;
+
+  fetch("https://formsubmit.co/ajax/docinhosdosuloficial@gmail.com", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      nome: form.nome.value,
+      telefone: form.telefone.value,
+      mensagem: form.mensagem.value,
+      _subject: "Novo Orçamento pelo Site",
+      _captcha: "false"
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    form.reset(); // limpa o formulário
+    const msg = document.getElementById("mensagem-sucesso");
+    msg.style.display = "block";
+    window.scrollTo({ top: msg.offsetTop - 100, behavior: "smooth" });
+
+    // opcional: esconder após 5 segundos
+    setTimeout(() => { msg.style.display = "none"; }, 5000);
+  })
+  .catch(error => {
+    alert("Erro ao enviar. Tente novamente.");
+    console.error(error);
+  });
 });
 </script>
 </body>
