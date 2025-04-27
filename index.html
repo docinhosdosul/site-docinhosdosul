@@ -16,6 +16,71 @@ gtag('config', 'G-LMHJ90BPPL');
 <link rel="icon" href="favicon.png" type="image/x-icon">
 <meta name="google-site-verification" content="_d4K6QoJKbmokGh6H46GbO44z_HRTj9-_X6PLLSBsh8" />
 <style>
+  header {
+  background-color: var(--ciano);
+  color: #fff;
+  padding: 0.8rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-family: 'Amarillo', cursive;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--rosa);
+}
+
+.btn-header {
+  background-color: var(--rosa);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-header:hover {
+  background-color: var(--rosa-dark);
+}
   @font-face {
     font-family: 'Amarillo';
     src: url('fonts/Amarillo.ttf') format('truetype');
@@ -288,17 +353,21 @@ margin-top: 1rem;
 </head>
 <body>
 <header class="topo">
-  <div class="logo-area">
-    <img src="logo.png" alt="Docinhos do Sul Logo" class="logo-img">
-    <div class="logo-text">Docinhos do Sul</div> <!-- Adicionei essa linha -->
+  <div class="header-container">
+    <div class="logo-area">
+      <img src="logo.png" alt="Docinhos do Sul Logo" class="logo-img">
+      <div class="logo-text">Docinhos do Sul</div>
+    </div>
+    <nav class="menu">
+      <a href="#orcamento">Orçamento</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-header" target="_blank">
+      Fazer pedido
+    </a>
   </div>
-  <nav class="menu">
-    <a href="#orcamento">Orçamento</a>
-    <a href="#avaliacoes">Avaliações</a>
-    <a href="#produtos">Produtos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-  <a href="https://api.whatsapp.com/send?phone=5541988722047" class="btn-header" target="_blank">Fazer pedido</a>
 </header>
 <section class="hero-section">
 <h2>Doces que encantam, momentos que ficam</h2>
