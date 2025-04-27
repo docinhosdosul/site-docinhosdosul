@@ -69,18 +69,20 @@ gtag('config', 'G-LMHJ90BPPL');
 .btn-header {
   background-color: var(--rosa);
   color: var(--ciano);
+  border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
   position: relative;
   z-index: 10;
 }
 
 .btn-header:hover {
   background-color: var(--ciano);
-  
+  color: var(--rosa);
+  border: 1px solid var(--rosa);
 }
   @font-face {
     font-family: 'Amarillo';
