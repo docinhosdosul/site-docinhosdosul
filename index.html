@@ -26,16 +26,19 @@ gtag('config', 'G-LMHJ90BPPL');
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  position: relative; /* Importante para posicionar elementos filhos */
+  height: 100px; /* Define uma altura para o cabeçalho */
 }
 
+/* Logo */
 .logo-area {
+  position: absolute; /* Livre para movimentar */
+  top: 10px; /* Ajuste a posição vertical */
+  left: 20px; /* Ajuste a posição horizontal */
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-family: 'Amarillo', cursive;
 }
 
 .logo-img {
@@ -45,11 +48,15 @@ gtag('config', 'G-LMHJ90BPPL');
 
 .logo-text {
   font-size: 1.5rem;
-  font-family: 'Amarillo', cursive;
-  color: fe597d;
+  color: #fe597d;
 }
 
+/* Menu */
 .menu {
+  position: absolute; /* Livre para movimentar */
+  top: 35px; /* Ajuste para subir ou descer */
+  left: 50%; /* Começa do meio */
+  transform: translateX(-50%); /* Corrige para centralizar perfeitamente */
   display: flex;
   gap: 2rem;
 }
@@ -65,10 +72,12 @@ gtag('config', 'G-LMHJ90BPPL');
 .menu a:hover {
   color: var(--rosa);
 }
-    .btn-header {
-  position: absolute;
-  top: 10px;
-  right: 5px;
+
+/* Botão "Fazer Pedido" */
+.btn-header {
+  position: absolute; /* Livre para movimentar */
+  top: 30px; /* Altura do botão */
+  right: 20px; /* Distância da direita */
   background-color: var(--rosa);
   color: var(--ciano);
   padding: 0.4rem 1.5rem;
@@ -78,23 +87,24 @@ gtag('config', 'G-LMHJ90BPPL');
   transition: background 0.3s ease;
   z-index: 1000;
 }
-  .btn-header:hover {
-  background-color: var(--ciano);
-    color: var(--rosa);
-    border: 1px solid var(--rosa);
-}
-  @font-face {
-    font-family: 'Amarillo';
-    src: url('fonts/Amarillo.ttf') format('truetype');
-  }
 
-  .logo-area {
-    font-family: 'Amarillo', cursive;
-  }
+.btn-header:hover {
+  background-color: var(--ciano);
+  color: var(--rosa);
+  border: 1px solid var(--rosa);
+}
+
+/* Fonte */
+@font-face {
+  font-family: 'Amarillo';
+  src: url('fonts/Amarillo.ttf') format('truetype');
+}
+
+/* Cores */
 :root {
---ciano: #00bcd4;
---rosa: #e91e63;
---rosa-dark: #c2185b;
+  --ciano: #00bcd4;
+  --rosa: #e91e63;
+  --rosa-dark: #c2185b;
 }
 body {
 margin: 0;
