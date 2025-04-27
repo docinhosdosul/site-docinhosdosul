@@ -478,9 +478,30 @@ window.onscroll = function() {
 btnTopo.addEventListener("click", function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+    <script>
+// Quando o usuário rolar 20px para baixo, mostra o botão
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  const btn = document.getElementById("btn-topo");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+// Quando clicar no botão, volta ao topo
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 </script>
   <button id="btn-topo" title="Voltar ao topo">
   <i class="fas fa-arrow-up"></i>
+</button>
+  <button onclick="topFunction()" id="btn-topo" title="Voltar ao Topo">
+  ↑
 </button>
 </body>
 </html>
