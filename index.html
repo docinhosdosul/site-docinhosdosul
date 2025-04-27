@@ -32,23 +32,27 @@ gtag('config', 'G-LMHJ90BPPL');
 
 /* Logo */
 .logo-area {
-  position: absolute; /* Livre para movimentar */
-  top:-38px; /* Ajuste a posição vertical */
-  left: 30px; /* Ajuste a posição horizontal */
-  display: flex;
-  align-items: center;
-  gap: -10rem;
+  position: relative; /* OK */
+  top: -38px;
+  left: 30px;
+  width: fit-content; /* Só ocupa o espaço necessário */
   font-family: 'Amarillo', cursive;
 }
 
 .logo-img {
   width: 150px;
   height: auto;
+  display: block;
 }
 
 .logo-text {
+  position: absolute;
+  top: 50%; /* Meio da imagem */
+  left: 50%; /* Meio da imagem */
+  transform: translate(-50%, -50%); /* Corrige para o centro real */
   font-size: 1rem;
   color: #fff;
+  white-space: nowrap; /* Não quebrar linha */
 }
 
 /* Menu */
