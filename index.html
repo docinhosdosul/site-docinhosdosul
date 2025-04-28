@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Docinhos do Sul - Doceria & Confeitaria</title>
+<title>Home|Docinhos do Sul - Doceria & Confeitaria</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMHJ90BPPL"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -52,17 +52,18 @@ gtag('config', 'G-LMHJ90BPPL');
   left: 50%; /* Começa do meio */
   transform: translateX(-50%); /* Corrige para centralizar perfeitamente */
   display: flex;
-  gap: 0.3rem;
+  gap: 0.1rem; /* Diminuí o gap para aproximar mais */
 }
 
 .menu a {
+  margin: 0; /* Retira qualquer margem */
+  padding: 0.2rem 0.5rem; /* Um pequeno padding para conforto no clique */
   font-size: 1rem;
   font-weight: normal;
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .menu a:hover {
   color: var(--rosa);
 }
