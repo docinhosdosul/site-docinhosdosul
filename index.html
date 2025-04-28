@@ -65,6 +65,21 @@ gtag('config', 'G-LMHJ90BPPL');
   position: relative; /* Importante para o efeito funcionar */
   transition: color 0.3s ease;
 }
+  
+.menu a + a {
+  position: relative;
+}
+
+.menu a + a::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem; /* Distância da barrinha para o item */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 1.2rem;
+  background-color: #fff; /* Cor da barrinha (pode mudar para var(--ciano) ou outro) */
+}
 
 .menu a::after {
   content: "";
