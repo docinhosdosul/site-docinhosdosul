@@ -257,7 +257,7 @@ background-color: var(--rosa-dark);
 }
 .btn {
 display: inline-block;
-  position: translate(); /* Livre para movimentar */
+  position: fixed(); /* Livre para movimentar */
   top: 10px; /* Ajuste para subir ou descer */
   left: 45%; /* Começa do meio */
 background-color: transparent;
@@ -352,6 +352,7 @@ margin-top: 1rem;
 }
 </style>
 </head>
+
 <body>
 <header class="topo">
   <div class="header-container">
@@ -470,8 +471,7 @@ margin-top: 1rem;
 <section id="avaliacoes">
 <script src="https://static.elfsight.com/platform/platform.js" async></script>
 <div class="elfsight-app-b1d4ec21-285a-4d61-94d6-6ae7c2ab5135" data-elfsight-app-lazy></div>
-</section>
-<footer>
+  <footer>
 <div class="footer-social">
 <a href="https://www.instagram.com/docinhosdosuloficial/" target="_blank"><i class="fab fa-instagram"></i></a>
 <a href="https://www.facebook.com/docinhosdosuloficial" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -488,6 +488,7 @@ margin-top: 1rem;
 © 2025 Docinhos do Sul. Todos os direitos reservados.
 </div>
 </footer>
+</section>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 const swiper = new Swiper('.swiper', {
