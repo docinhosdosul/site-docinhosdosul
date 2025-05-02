@@ -255,9 +255,9 @@ transition: background 0.3s ease;
 input[type="submit"]:hover {
 background-color: var(--rosa-dark);
 }
-.btn-hero {
+.btn {
 display: inline-block;
-  position: absolute; /* Livre para movimentar */
+  position: translate(); /* Livre para movimentar */
   top: 540px; /* Ajuste para subir ou descer */
   left: 45%; /* Começa do meio */
 background-color: transparent;
@@ -268,7 +268,7 @@ border-radius: 10px;
 text-decoration: none;
 font-weight: bold;
 transition: background 0.3s ease;
-.btn-hero:hover {
+.btn:hover {
   background-color: transparent;
   color: var(--rosa);
   border: 1px solid var(--rosa);
@@ -327,11 +327,6 @@ margin-right: 0.4rem;
 font-size: 0.8rem;
 margin-top: 1rem;
 }
-  .logo-area {
-  display: flex;
-  margin-top: 14px;
-  justify-content: left; /* esquerda */
-  gap: 1rem; /* espaço entre logo e texto */
 }
   #btn-topo {
   display: none; /* Começa escondido */
@@ -354,11 +349,6 @@ margin-top: 1rem;
   background-color: var(--rosa-dark);
   transform: scale(1.1);
 }
-  .menu {
-  display: flex;
-  justify-content: left; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  gap: 1rem; /* Espaço entre os botões */
 }
 </style>
 </head>
